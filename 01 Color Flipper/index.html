@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Color Flipper</title>
+</head>
+<style>
+  h1{
+    padding-top: 200px;
+  }
+  
+  h1,h2{
+    display: flex;
+    justify-content: center;
+    text-transform: capitalize;
+  }
+  .inner-div{
+    display: flex;
+    justify-content: center;
+    padding: 20px 50px 0 50px;
+    margin: auto;
+  }
+
+  .container {
+    width: 100px;
+    height: 100px;
+    border: 2px solid black;
+    margin: 20px;
+
+  }
+
+   #first{
+    cursor: pointer;
+    background-color: blue;
+  }
+
+  #second{
+    cursor: pointer;
+    background-color: lightgreen;
+  }
+
+  #third{
+    cursor: pointer;
+    background-color: orange;
+  }
+
+  #fourth{
+    cursor: pointer;
+    background-color: purple;
+  }
+</style>
+
+<body>
+
+
+  <div class="container-main">
+
+    <h1 class="upper-heading">color flipper</h1>
+
+    <div class="inner-div">
+      <div class="container" id="first">
+    </div>
+    <div class="container" id="second"> </div>
+    <div class="container" id="third"> </div>
+    <div class="container" id="fourth"> </div>
+
+    </div>
+    <h2 class="lower-heading">Select the color to change background</h2>
+
+  </div>
+
+
+
+</body>
+<script>
+
+  const colorBoxes = document.querySelectorAll(".container");
+  const body = document.querySelector("body");
+
+  colorBoxes.forEach((clrBx) => {
+    console.log(clrBx);
+    clrBx.addEventListener('click', function (e) {
+      console.log(e);
+      console.log(e.target)
+
+      if(e.target.id === "first"){
+        body.style.backgroundColor = 'blue';
+      }
+      if(e.target.id === "second"){
+        body.style.backgroundColor = 'lightgreen';
+      }
+      if(e.target.id === "third"){
+        body.style.backgroundColor = 'orange';
+      }
+      if(e.target.id === "fourth"){
+        body.style.backgroundColor = 'purple';
+      }
+    })
+  });
+
+
+
+</script>
+
+</html>
