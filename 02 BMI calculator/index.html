@@ -5,37 +5,33 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>BMI Calculator</title>
-  <style>
-    .container{
-      display: flex;
-      justify-content: center;
-    }
-
-  </style>
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-  <div class="container">
     <h1>BMI Calculator</h1>
-    <form action="">
-    <label for="name">Name: </label>
-    <input type="text" placeholder="Your name" id="name">
+    <div class="container">
+      
+      <form action="">
+      <label for="name">Name </label>
+      <input type="text" placeholder="Your name" id="name">
 
-    <label for="height">Height in CM</label>
-    <input type="number" placeholder="Height" id="height">
+      <label for="height">Height in CM</label>
+      <input type="number" placeholder="Height" id="height">
 
-    <label for="weight">Weight in KG</label>
-    <input type="number" placeholder="Weight" id="weight">
+      <label for="weight">Weight in KG</label>
+      <input type="number" placeholder="Weight" id="weight">
 
-    <button id="btn">Calculate</button>
-    <div id="result"></div>
-    <h3>BMI weight Guide</h3>
-    <p>UnderWeight : Under 18</p>
-    <p>Normal: 18 - 25</p>
-    <p>Overweight : Over 25</p>
-    </form>
-  </div>
+      <button id="btn">Calculate</button>
+      <div id="result"></div>
+      <h3>BMI weight Guide</h3>
+      <p>UnderWeight : Under 18</p>
+      <p>Normal: 18 - 25</p>
+      <p>Overweight : Over 25</p>
+      </form>
+      
+    </div>
 
 </body>
 <script src="bmi.js">

@@ -1,0 +1,50 @@
+body{
+  margin: 0;
+  padding: 0;
+  background-color: bisque;
+  font-family: Arial, Helvetica, sans-serif;
+ 
+}
+
+
+h1{
+  margin-top: 150px;
+  display: flex;
+  justify-content: center;
+}
+.container {
+  width: 300px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+form{
+  text-align: center;
+}
+
+label{
+  font-size: large;
+  font-weight: bolder;
+  
+}
+
+input,#btn{
+  width: 100%;
+  text-align: center;
+  padding: 7px;
+  margin: 5px 10px 20px 0;
+  font-weight: bold;
+  border-radius: 20px;
+
+}
+
+#btn{
+  width: 35%;
+  background-color: black;
+  color: white;
+}
+
+#result{
+  width: 100%;
+  display: block;
+}

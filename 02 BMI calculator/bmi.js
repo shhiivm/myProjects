@@ -9,10 +9,9 @@ getForm.addEventListener("submit", function (e) {
 
   const result = document.querySelector("#result");
 
-  if(name === ''){
-    result.innerHTML = 'Please Enter your name first.'
-  }
-  else if (height === "" || height < 0 || isNaN(height)) {
+  if (name === "") {
+    result.innerHTML = "Please Enter your name first.";
+  } else if (height === "" || height < 0 || isNaN(height)) {
     result.innerHTML = `Please give a Valid height`;
   } else if (weight === "" || weight < 0 || isNaN(weight)) {
     result.innerHTML = "Please give a valid Weight";
