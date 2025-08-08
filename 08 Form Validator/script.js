@@ -27,9 +27,15 @@ function validateName() {
 }
 
 function validateEmail() {
-  let mail = get_id.value;
+  let mail = get_id.value.trim();
+
+  let emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
   if (mail === "") {
     alert(`Email can't be empty`);
+    return;
+  } else if (!emailPattern.test(mail)) {
+    alert(`Please enter a valid email address`);
     return;
   } else {
     validatePassword();
@@ -37,10 +43,15 @@ function validateEmail() {
 }
 
 function validatePassword() {
+  let passPattern = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).{8,}$/;
   let pass = get_pass.value;
   if (pass === "") {
     alert(`Password can't be empty`);
     return;
+  } else if (!passPattern.test(pass)) {
+    alert(
+      `Password must be at least 8 characters, include uppercase, lowercase, and a number`
+    );
   } else {
     validateConfirmPAssword(pass);
   }
@@ -56,12 +67,11 @@ function validateConfirmPAssword(pass) {
 }
 
 function finalSubmit() {
-  // let para = document.createElement("p");
-  // para.innerHTML = `<p>Form Submitted Sucessfully`;
-
-  // document.querySelector("#res").appendChild(p);
   get_name.value = "";
   get_id.value = "";
   get_pass.value = "";
   conf_pass.value = "";
+  document.querySelector("#res").innerHTML = `
+    <p style="color:green; font-weight:bold;">✅ Form submitted successfully!</p>
+    `;
 }
