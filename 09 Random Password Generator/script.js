@@ -1,4 +1,4 @@
-const generated_password = document.getElementById("get-text");
+let generated_password = document.getElementById("get-text");
 
 const btn = document.querySelector("#btn");
 
@@ -7,14 +7,17 @@ const small = caps.toLowerCase();
 const special = "!@#$%^&*()-_=+|[]{};:/?.>";
 const nums = "0123456789";
 
-let password = "";
+
 
 btn.addEventListener("click", (e) => {
   e.preventDefault();
 
+  let password = "";
+
   let getLength = document.querySelector("#length");
   let passLength = parseInt(getLength.value);
-  // console.log(passLength);
+  
+  
   console.log("hello" + passLength);
   while (password.length < passLength) {
     password += caps.charAt(Math.floor(Math.random() * caps.length));
@@ -23,5 +26,9 @@ btn.addEventListener("click", (e) => {
     password += special.charAt(Math.floor(Math.random() * special.length));
   }
 
-  console.log(password);
+  generated_password.value = password;
 });
+
+const arr = new Uint8Array(6);
+
+console.log(crypto.getRandomValues(arr));
