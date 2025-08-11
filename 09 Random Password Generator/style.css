@@ -1,0 +1,45 @@
+body{
+  background-color: crimson;
+  color: white;
+}
+.container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  /* align-items: center; */
+  height: 60vh;
+}
+
+input{
+  width: 30vw;
+  height: 4vh;
+}
+
+#copy{
+  
+}
+
+#btn{
+  width:20vw;
+}
+
+.input-wrapper {
+  position: relative; /* makes child absolute positioning relative to this */
+  display: inline-block;
+}
+
+.input-wrapper input {
+  padding-right: 30px; /* add space so text doesn't overlap image */
+  height: 30px;
+  font-size: 14px;
+}
+
+.input-wrapper img {
+  position: absolute;
+  right: 8px;   /* distance from right edge */
+  top: 50%;
+  transform: translateY(-50%); /* vertically center */
+  width: 16px; /* icon size */
+  height: 16px;
+  pointer-events: none; /* let clicks pass through to input */
+}
