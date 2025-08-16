@@ -58,6 +58,18 @@ function clearAll() {
   document.querySelector(".humid-windspeed").innerHTML = ``;
 }
 
+document.querySelector("#city").addEventListener("click", () => {
+  document.querySelector("#currCity").innerHTML = "";
+  document.querySelector("#para").innerHTML = "";
+  clearAll();
+});
+
 document.querySelector("#btn").addEventListener("click", () => {
   cityName();
+});
+
+document.getElementById("city").addEventListener("keydown", function (event) {
+  if (event.key === "Enter") {
+    cityName();
+  }
 });
